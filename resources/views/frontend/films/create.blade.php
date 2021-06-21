@@ -15,14 +15,14 @@
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control  required  @error('name') is-invalid @enderror"
-                               name="name" id="name" value="test">
+                               name="name" id="name">
                         <span class="invalid-feedback" role="alert"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Ticket Price</label>
                         <input type="text" class="form-control  required  @error('ticket_price') is-invalid @enderror"
-                               name="ticket_price" id="ticket_price" value="540">
+                               name="ticket_price" id="ticket_price">
                         <span class="invalid-feedback" role="alert"></span>
                     </div>
                     <div class="form-group">
@@ -68,7 +68,7 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="4" selected="selected">4</option>
+                            <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
                         <span class="invalid-feedback" role="alert"></span>
@@ -76,7 +76,7 @@
                     <div class="form-group">
                         <label for="name">Country</label>
                         <input type="text" class="form-control  required  @error('country') is-invalid @enderror"
-                               name="country" id="country" value="usa">
+                               name="country" id="country">
                         <span class="invalid-feedback" role="alert"></span>
                     </div>
                     <button type="submit" class="btn btn-primary float-right">Save</button>

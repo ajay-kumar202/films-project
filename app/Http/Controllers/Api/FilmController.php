@@ -10,7 +10,7 @@ class FilmController extends RestController
 {
     public function __construct(Request $request)
     {
-        $this->middleware('custom_auth:api')->only(["store",'update',"delete"]);
+        //$this->middleware('custom_auth:api')->only(["store",'update',"delete"]);
         parent::__construct('Film');
         $this->__request = $request;
         $this->__apiResource = 'Film';

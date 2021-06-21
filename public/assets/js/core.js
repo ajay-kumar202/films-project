@@ -1,8 +1,6 @@
 const $baseUrl = `${location.origin}`;
 const $userLogin = $('meta[name="authorization"]').attr('content')
 
-console.log("dadasasd", $userLogin);
-
 function getRecord($url, $target_container = "", $method = 'GET') {
     $.ajax({
         type: $method,
@@ -74,6 +72,7 @@ $("form.ajax-form").submit(function (e) {
         processData: false,
         contentType: false,
         success: function ($response) {
+
             hideSpinner();
             serverResponse($response, $redirectTo, $method);
         }
@@ -81,8 +80,6 @@ $("form.ajax-form").submit(function (e) {
         hideSpinner();
         var $errors = $response.responseJSON.data;
         $.each($errors, function ($errorKey, $errorValue) {
-            //$('.error_' + $errorKey).text($errorValue).show();
-            console.log($errorKey + " ==== " + $errorValue);
             $("#" + $errorKey).addClass("is-invalid");
             $("#" + $errorKey).siblings("span.invalid-feedback").html("<strong>" + $errorValue + "</strong>");
         });
